@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Week's Highlights</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: auto;
+            padding: 0;
+            height: 100%;
+            width: 90%;
+            box-sizing: border-box;
+        }
+        .review-section {
+            background-color: white;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        .review-container {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+        }
+        .review-slide {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .review-box {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 0 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            min-width: 300px;
+            max-width: 300px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .review-box img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .review-images {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .review-images img {
+            margin-bottom: 5px;
+        }
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #ddd;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .carousel-btn.left {
+            left: 10px;
+        }
+        .carousel-btn.right {
+            right: 10px;
+        }
+    </style>
+    
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: auto; padding: 0; height: 100% ; left: auto; top: 20%; width: 90%; box-sizing: border-box;">
+    
+
+    <!-- This Week's Highlights Section -->
+    <section style="background-color: white; padding: 20px; ">
+        <h2 style="text-align: center; font-size: 30px;">This Week's Highlights</h2>
+
+        <!-- Filter Buttons -->
+        <div style="text-align: center; margin-bottom: 10px;  ">
+            <button style="border: 1px solid #0f0e0e;  padding: 10px 20px; background-color: white; margin-right: 10px; cursor: pointer; border-radius: 20px; ">Best Sellers</button>
+            <button style="border: 1px solid #0f0e0e; padding: 10px 20px; background-color: white; margin-right: 10px; cursor: pointer; border-radius: 20px; ">New Arrivals</button>
+            <button style="border: 1px solid #0f0e0e; padding: 10px 20px; background-color: white; margin-right: 10px; cursor: pointer; border-radius: 20px; ">Sale Items</button>
+            <button style="border: 1px solid #0f0e0e; padding: 10px 20px; background-color: white; cursor: pointer; border-radius: 20px; ">Top Rated</button>
+        </div>
+        <script>
+           
+            document.getElementById('bestSellers').addEventListener('click', function() {
+                alert('Best Sellers button was clicked!');
+            });
+    
+            
+            document.getElementById('newArrivals').addEventListener('click', function() {
+                alert('New Arrivals button was clicked!');
+            });
+    
+            
+            document.getElementById('saleItems').addEventListener('click', function() {
+                alert('Sale Items button was clicked!');
+            });
+    
+           
+            document.getElementById('topRated').addEventListener('click', function() {
+                alert('Top Rated button was clicked!');
+            });
+        </script>
+       
+
+        <!-- Product Cards -->
+        
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;">
+           
+    
+    
+            
+            <!-- Product 1 -->
+            <div style="background-color: #fff; border: 1px solid #ddd; padding: 20px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); ">
+                <img src="01.png" alt="Denim midi skirt with pockets" style="width: 70%; height: auto; margin-bottom: 10px;">
+        
+                 <!-- Sizes -->
+                 <div style="margin-bottom: 5px;">
+                    <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">S</span>
+                    <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">M</span>
+                    <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">L</span>
+                    <span style="border: 1px solid #ddd; padding: 5px 10px;">XL</span>
+                </div>
+                <div>
+                    <h3 style="font-size: 15px;"> Denim midi skirt with pockets</h3>
+                    <p><span style="text-decoration: line-through; color: gray;">$156.00</span> <strong>$126.50</strong></p>
+                    <p style="color: gray;">+1 colors</p>
+                    
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            
+            <div style="background-color: #fff; border: 1px solid #ddd; padding: 20px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="08.png" alt="Leather sneakers with golden laces" style="width: 70%; height: auto; margin-bottom: 10px;">
+                <div style="margin-bottom: 10px;">
+                    <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">S</span>
+                    <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">M</span>
+                    <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">L</span>
+                    <span style="border: 1px solid #ddd; padding: 5px 10px;">XL</span>
+                </div>
+                <h3 style="font-size: 15px;">Leather sneakers with golden laces</h3>
+                <p><strong>$74.00</strong></p>
+                <p style="color: gray;">+2 colors</p>
+            </div>
+
+            <!-- Product 3 -->
+            <div style="background-color: #fff; border: 1px solid #ddd; padding: 20px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <img src="11.png" alt="Warm sweatshirts without a hoodie" style="width: 70%; height: auto; margin-bottom: 10px;">
+                <div style="margin-bottom: 10px;">
+                    <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">S</span>
+                    <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">M</span>
+                    <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">L</span>
+                    <span style="border: 1px solid #ddd; padding: 5px 10px;">XL</span>
+                </div>
+                <h3 style="font-size: 15px;">Warm sweatshirts without a hoodie</h3>
+                <p><strong>$32.99</strong></p>
+                <p style="color: gray;">+2 colors</p>
+            </div>
+            <!--Product 4-->
+            <div style="background-color: #fff; border: 1px solid #ddd; padding: 20px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <img src="04.png" alt="Knitted bag with a wooden handle" style="width: 70%; height: auto; margin-bottom: 10px;">
+                    <div style="margin-bottom: 10px;">
+                        <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">S</span>
+                        <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">M</span>
+                        <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">L</span>
+                        <span style="border: 1px solid #ddd; padding: 5px 10px;">XL</span>
+                    </div>
+                    <h3 style="font-size: 15px;">Knitted bag with a wooden handle</h3>
+                    <p><strong>$105.00</strong></p>
+                    <p style="color: gray;">+1 colors</p>
+            </div>
+            
+            <!--Product 5-->
+            
+            <div style="background-color: #fff; border: 1px solid #ddd; padding: 20px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); ">
+                <img src="09.png" alt="White cotton blouse with necklace" style="width: 70%; height: auto; margin-bottom: 10px;">
+                <div style="margin-bottom: 10px;">
+                    <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">S</span>
+                    <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">M</span>
+                    <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">L</span>
+                    <span style="border: 1px solid #ddd; padding: 5px 10px;">XL</span>
+                </div>
+                <h3 style="font-size: 15px;">White cotton blouse with necklace</h3>
+                <p><strong>$38.50</strong></p>
+                <p style="color: gray;">+1 colors</p>
+            </div>
+            <!--Product 6-->
+            <div style="background-color: #fff; border: 1px solid #ddd; padding: 20px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); ">
+                <img src="10.png" alt="Leather handbag for women" style="width: 70%; height: auto; margin-bottom: 10px;">
+                <div style="margin-bottom: 10px;">
+                    <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">S</span>
+                    <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">M</span>
+                    <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">L</span>
+                    <span style="border: 1px solid #ddd; padding: 5px 10px;">XL</span>
+                </div>
+                <h3 style="font-size: 15px;">Leather handbag for women</h3>
+                <p><strong>$140.00</strong></p>
+                <p style="color: gray;">+2 colors</p>
+            </div>
+            <!--Product 7-->
+            <div style="background-color: #fff; border: 1px solid #ddd; padding: 20px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); ">
+                <img src="05.png" alt="Polarized sunglasses for men" style="width: 70%; height: auto; margin-bottom: 10px;">
+                <div style="margin-bottom: 10px;">
+                    <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">S</span>
+                    <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">M</span>
+                    <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">L</span>
+                    <span style="border: 1px solid #ddd; padding: 5px 10px;">XL</span>
+                </div>
+                <h3 style="font-size: 15px;">Polarized sunglasses for men</h3>
+                <p><strong>$96.00</strong></p>
+                <p style="color: gray;">+2 colors</p>
+            </div>
+            <!--Product 8-->
+            <div style="background-color: #fff; border: 1px solid #ddd; padding: 20px; text-align: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); ">
+                <img src="06.png" alt="Classic cotton men's shirt" style="width: 70%; height: auto; margin-bottom: 10px;">
+                <div style="margin-bottom: 10px;">
+                    <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">S</span>
+                    <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">M</span>
+                    <span style="border: 1px solid #ddd; padding: 5px 10px; margin-right: 5px;">L</span>
+                    <span style="border: 1px solid #ddd; padding: 5px 10px;">XL</span>
+                </div>
+                <h3 style="font-size: 15px;">Classic cotton men's shirt</h3>
+                <p><strong>$27.00</strong></p>
+                <p style="color: gray;">+2 colors</p>
+            </div>
+            
+        </div>
+    </section>
+
+
+</body>
+</html>
