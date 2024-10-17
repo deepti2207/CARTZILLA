@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Review Slider</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .slider-container {
+            width: 100%;
+            max-width: 1200px; /* Container width */
+            overflow: hidden;
+            position: relative;
+            margin: auto;
+        }
+
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .review {
+            min-width: 33.33%; /* Display 3 reviews at once */
+            box-sizing: border-box;
+            padding: 20px;
+            text-align: center;
+            background-color: white;
+            border: 1px solid #ddd;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .customer-name {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .stars {
+            color: orange;
+            margin: 10px 0;
+        }
+
+        /* Arrow buttons */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .arrow-left {
+            left: 10px;
+        }
+
+        .arrow-right {
+            right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <section style="background-color: white; padding: 20px; ">
+        <h2 style="text-align: center; font-size: 30px;">Happy Customers</h2>
+
+<div class="slider-container">
+    <div class="slider">
+        <div class="review">
+            <img src="05.png" width="150" height="150"; >
+            
+            <div class="stars">★★★★★</div>
+            <p class="customer-name">Daniel Adams</p>
+            <p>These sunglasses are a game-changer! Not only do they offer superior protection from the sun, but they also elevate my style.</p>
+        </div>
+        <div class="review">
+            <img src="04.png" width="150" height="150"; >
+            <div class="stars">★★★★★</div>
+            <p class="customer-name">Victoria Gardner </p>
+            <p>Very satisfied with the purchase! As a frequent online shopper, not too big or small, it's exactly as it should be.</p>
+        </div>
+        <div class="review">
+            <img src="01.png" width="150" height="150"; >
+            <div class="stars">★★★★★</div>
+            <p class="customer-name">Alexandra D.</p>
+            <p>A wonderful compact bag, holds a lot of things, good tailoring, smooth seams, strong fittings, good quality.</p>
+        </div>
+        <div class="review">
+            <img src="06.png" width="150" height="150"; >
+            <div class="stars">★★★★★</div>
+            <p class="customer-name">Jenny Wilson</p>
+            <p>I love the quality of the product. Fast shipping, great service. Definitely recommend this!</p>
+        </div>
+        <div class="review">
+            <img src="08.png" width="150" height="150"; >
+            <div class="stars">★★★★★</div>
+            <p class="customer-name">Sarah Lee</p>
+            <p>Awesome product! Very stylish and durable. I use it every day!</p>
+        </div>
+        <div class="review">
+            <img src="10.png" width="150" height="150"; >
+            <div class="stars">★★★★★</div>
+            <p class="customer-name">James Smith</p>
+            <p>This is a must-have for anyone looking to stay trendy. Totally worth the price.</p>
+        </div>
+    </div>
+
+    <!-- Arrow Buttons -->
+    <button class="arrow arrow-left" onclick="moveLeft()">&#9664;</button>
+    <button class="arrow arrow-right" onclick="moveRight()">&#9654;</button>
+</div>
+
+<script>
+    let slider = document.querySelector('.slider');
+    let currentIndex = 0;
+    const visibleItems = 3;  // Number of items visible at a time
+    const totalItems = slider.children.length;
+
+    function moveLeft() {
+        if (currentIndex > 0) {
+            currentIndex--;
+        }
+        updateSlider();
+    }
+
+    function moveRight() {
+        if (currentIndex < totalItems - visibleItems) {
+            currentIndex++;
+        }
+        updateSlider();
+    }
+
+    function updateSlider() {
+        const itemWidth = document.querySelector('.review').offsetWidth;
+        slider.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+    }
+
+    window.addEventListener('resize', updateSlider); // Adjust if window is resized
+</script>
+
+</body>
+</html>
